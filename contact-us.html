@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - MovieHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #141414;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 60px; /* Space for fixed navbar */
+            position: relative;
+        }
+
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        .navbar .logo {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .navbar nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s, transform 0.3s ease;
+        }
+
+        .navbar nav ul li a:hover {
+            color: #e50914;
+            transform: scale(1.1);
+            text-decoration: underline;
+        }
+
+        main {
+            flex: 1;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 100px;
+            margin-top: 20px; /* Adjust for fixed navbar height */
+        }
+
+        .contact-header {
+          text-align: center;
+          padding: 40px 20px;
+          background-color: #000;
+          color: #fff;
+          margin-bottom: 40px;
+          
+        }
+
+        h1 {
+            text-decoration: double;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #000;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            margin-top: 40px;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+        }
+
+        button {
+            background-color: #e50914;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #be0c15;
+        }
+
+        footer {
+            background-color: #000;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 0%;
+            bottom: 0;
+            width: 100%;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        footer p {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 2rem;
+            margin: 0 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icon:hover {
+            color: #e50914;
+        }
+
+        #form-feedback {
+            margin-top: 10px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">MOVIX</div>
+
+        <nav>
+            <ul>
+                <li><a href="search.html">Search</a></li>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="trending-movies.html">Trending Movie</a></li>
+                <li><a href="tv-show.html">TV Shows</a></li>
+                <li><a href="actors.html">Actors</a></li>
+                <li><a href="contact-us.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <header class="contact-header">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Whether you have questions or feedback, feel free to reach out.</p>
+        </header>
+
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" placeholder="Inquiry about a movie" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="form-feedback"></div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MovieHub - All Rights Reserved</p>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://google.com" target="_blank" class="social-icon">
+                <i class="fab fa-google"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="social-icon">
+                <i class="fab fa-youtube"></i>
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            const feedback = document.getElementById('form-feedback');
+
+            if (name === '' || email === '' || subject === '' || message === '') {
+                feedback.textContent = 'Please fill in all fields.';
+                feedback.style.color = 'red';
+                return;
+            }
+
+            feedback.textContent = 'Thank you for your message! We will get back to you soon.';
+            feedback.style.color = 'green';
+
+            document.getElementById('contactForm').reset();
+        });
+    </script>
+
+</body>
+</html>
