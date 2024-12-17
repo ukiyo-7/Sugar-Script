@@ -220,10 +220,10 @@
     </footer>
 
     <script>
-        const apiKey = '18471487'; // Your API key from the email
+        const apiKey = '18471487'; 
         const baseUrl = 'https://www.omdbapi.com/';
 
-// Function to fetch movies by search term
+
 const searchMovies = async () => {
     const searchTerm = document.getElementById('movieInput').value;
     const movieDetails = document.getElementById('movieDetails');
@@ -242,13 +242,13 @@ const searchMovies = async () => {
             return;
         }
 
-        // Use .map() to display each movie
+        
         movieDetails.innerHTML = data.Search.map(movie => `
             <div>
                 <img src="${movie.Poster}" alt="${movie.Title}" onerror="this.src='https://via.placeholder.com/150x200?text=No+Image';">
                 <h3>${movie.Title} (${movie.Year})</h3>
             </div>
-        `).join(''); // Join to combine all movie HTML into one string
+        `).join(''); 
 
     } catch (error) {
         console.error('Error fetching movies:', error);
